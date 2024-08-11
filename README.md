@@ -36,7 +36,7 @@ Check out the live demo of the application [here](#).
 ## Screenshots
 
 ### Main Interface
-![Main Interface](screenshot1.png)
+![Main Interface](screenshot.png)
 
 ## How It Works
 
