@@ -4,7 +4,7 @@ A simple and intuitive To-Do List application to help you keep track of your tas
 
 ## Live Demo
 
-Check out the live demo of the application [here](#).
+Check out the live demo of the application [here](https://react-projects-7uzi.vercel.app/).
 
 ## Features
 
