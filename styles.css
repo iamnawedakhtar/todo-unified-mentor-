@@ -1,103 +1,107 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
 
-body {
-    background-color: #1e1e2f;
+body{
+    background-color: #2c3e50; /* Changed to a deep blue-gray */
 }
 
 .container {
     width: 100%;
     min-height: 100vh;
     padding: 10px;
-    background-color: #4a4a72;
+    background-color: #34495e; /* Darker blue-gray for contrast */
 }
 
-.todo-app {
+.todo-app{
     width: 100%;
     max-width: 540px;
-    background: #ececec;
-    margin: 150px auto 20px;
+    background: #ecf0f1; /* Light gray background */
+    margin:150px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 25px;
-    box-shadow: 0px 0px 30px #333;
+    box-shadow: 0px 0px 30px #7f8c8d; /* Softer shadow with gray tone */
 }
 
-h2 {
-    color: #4a4a72;
+h2{
+    color: #2980b9; /* Bright blue color for headings */
     display: flex;
     align-items: center;
     margin-bottom: 50px;
     font-size: 32px;
+    font-weight: bold;
     position: relative;
-    font-family: 'Georgia', serif;
 }
 
-.todo-app h2 img {
+.todo-app h2 img{
     position: absolute;
     right: 0;
     width: 40px;
     margin-left: 20px;
 }
 
-.row {
+.row{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #ffffff;
+    background: #ffffff; /* White background */
     border: none;
-    outline: 3px solid #4a4a72;
+    outline: 3px groove #2980b9; /* Blue outline */
     outline-offset: 5px;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
-    box-shadow: 0px 0px 10px #666;
+    box-shadow: 0px 0px 10px #34495e; /* Darker shadow for better contrast */
 }
 
-.row input {
+.row input{
     flex: 1;
     border: none;
     outline: none;
     padding: 10px;
     background: transparent;
-    font-size: 18px;
+    font-size: 20px; /* Slightly larger font */
     font-weight: 600;
+    color: #34495e; /* Darker text color */
     letter-spacing: 1px;
 }
 
-.row input::placeholder {
-    color: #4a4a72;
+.row input::placeholder{
+    color: #95a5a6; /* Lighter gray for placeholders */
 }
 
-.row button {
+.row button{
     border: none;
     outline: none;
     padding: 16px 30px;
-    background: #4a4a72;
-    color: #fff;
+    background: #2980b9; /* Bright blue background for buttons */
+    color: #ffffff;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 30px;
     margin: 1px;
 }
 
-ul li {
+ul li{
     list-style: none;
     font-size: 18px;
     font-weight: 500;
+    color: #34495e; /* Darker text color */
     letter-spacing: 1px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
     margin-block: 10px;
+    background-color: #ecf0f1; /* Light gray background */
+    border-radius: 15px;
 }
 
-ul li::before {
+ul li::before{
     content: '';
     position: absolute;
     height: 30px;
@@ -110,40 +114,110 @@ ul li::before {
     left: 8px;
 }
 
-ul li.checked {
-    background: #4a4a72;
-    color: #fff;
+ul li.checked{
+    background: #2980b9; /* Bright blue background for checked items */
+    color: #ffffff;
     border-radius: 50px;
 }
 
-ul li.checked::before {
+ul li.checked::before{
     background: url(images/checked.png);
     background-size: cover;
 }
 
-ul li span {
+ul li span{
     position: absolute;
     top: 10px;
     margin-right: 5px;
     width: 30px;
     height: 30px;
     font-size: 22px;
-    color: #333;
+    color: #7f8c8d; /* Gray for icons */
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
 }
 
-ul li.checked span {
+ul li.checked span{
     color: #ffffff;
 }
 
-ul li.checked span:hover {
-    background: #fff;
-    color: #4a4a72;
+ul li.checked span:hover{
+    background: #ffffff;
+    color: #2980b9; /* Blue hover effect for checked items */
 }
 
-ul li span:hover {
-    background: #333;
-    color: #fff;
+ul li span:hover{
+    background: #2980b9; /* Blue hover effect for unchecked items */
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .todo-app {
+        margin: 100px auto 20px;
+        padding: 30px 20px 50px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .row input {
+        font-size: 16px;
+    }
+
+    .row button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 10px 8px 10px 40px;
+    }
+
+    ul li span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-app {
+        margin: 50px auto 20px;
+        padding: 20px 10px 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 0;
+    }
+
+    .row input {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .row button {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 8px 8px 8px 30px;
+    }
+
+    ul li span {
+        font-size: 18px;
+    }
 }
